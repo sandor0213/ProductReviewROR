@@ -1,0 +1,9 @@
+<%= simple_form_for @book do |f| %>
+	<%= f.input :title, label: "Book titlecsd" %>
+	<%= f.input :description, label: "Description modif" %>
+	<%= f.input :author %>
+	<%= f.button :submit %>
+
+<% end %>
+
+<%= link_to "See existing books", books_path %>
