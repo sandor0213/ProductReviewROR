@@ -1,9 +1,22 @@
 <%= simple_form_for @book do |f| %>
+<!-- <%= select_tag "whatever", options_for_select([ "dd", "d" ], "MasterCard") %> -->
+
+
+	<%= select_tag(:category_id, options_for_select(@categories), :promt => "Select ad category") %>
+
+
+<!-- <%= select_tag :category_id, options_for_select([@category], "Select a category") %> -->
+
+<!-- <%= select_tag(:option, options_for_select([["Option 1",1],["Option 2",2],["Option 3",3]], params[:option] ), class:"select") %> -->
+
+
+<!-- <%= select_tag :category_id, options_for_select([@categories], "Select a category") %> -->
+
 	<%= f.input :title, label: "Book titlecsd" %>
 	<%= f.input :description, label: "Description modif" %>
 	<%= f.input :author %>
 	<%= f.button :submit %>
-
+ 
 <% end %>
 
 <%= link_to "See existing books", books_path %>
